@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "54b81a7b-1075-4a26-80c6-f596dc4bd8e0",
+		"name": "many-to-many",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "genre",
+			"item": [
+				{
+					"name": "saveGenre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\":\"THRILLER\",\n\t\"description\":\"thriller\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genre/saveGenre",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre",
+								"saveGenre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateGenre",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1\",\n\t\"code\":\"Thriller\",\n\t\"description\":\"Thriller\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genre/updateGenre",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre",
+								"updateGenre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getGenreById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genre/getGenreById/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre",
+								"getGenreById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllGenres",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genre/getAllGenres",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre",
+								"getAllGenres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteGenreById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genre/deleteGenreById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre",
+								"deleteGenreById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "saveMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"julia's eyes\",\n\t\"producer\":\"dunno\",\n\t\"release_date\":\"2019-01-01\",\n\t\"rating\":\"4.5\",\n\t\"genres\":[\n\t\t{\n\t\t\t\"id\":\"1\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movie/saveMovie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movie",
+								"saveMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMovie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"title\":\"julia's eyes\",\n\t\"producer\":\"dunno\",\n\t\"release_date\":\"2019-01-01\",\n\t\"rating\":\"4.5\",\n\t\"genres\":[\n\t\t{\n\t\t\t\"id\":\"1\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movie/updateMovie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movie",
+								"updateMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMovieById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movie/getMovieById/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movie",
+								"getMovieById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMovies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movie/getAllMovies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movie",
+								"getAllMovies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMoviesByGenre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"julia's eyes\",\n\t\"producer\":\"dunno\",\n\t\"release_date\":\"2019-01-01\",\n\t\"rating\":\"4.5\",\n\t\"genres\":[\n\t\t{\n\t\t\t\"id\":\"1\"\n\t\t},\n\t\t{\n\t\t\t\"id\":\"2\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movie/getMoviesByGenreId/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movie",
+								"getMoviesByGenreId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

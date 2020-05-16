@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/movie-catalog
+    username: wk-prjects
+    password: admin
