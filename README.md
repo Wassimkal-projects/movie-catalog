@@ -4,7 +4,7 @@
 ## Création du projet: 
 * Pour générer le projet, on a utilisé spring initializr, comme alternative on peut installer Spring boot CLI: 
 
-![Image](https://github.com/axeaneProjects/github-wassim/blob/master/many-to-many/src/main/resources/initializr.JPG)  
+![Image](https://github.com/Wassimkal-projects/movie-catalog/blob/master/src/main/resources/initializr.JPG)  
 
 ### SGBD: PostgreSQL
 * Puisque nous utilisons PostgreSQL comme base de données, nous devons ajouter les dépendances et configurer l'URL, le nom d'utilisateur et le mot de passe de la base de données afin que Spring puisse établir une connexion avec la base de données au démarrage,
@@ -890,7 +890,7 @@ public class GenreResource {
 
 ## Exemple de Test avec Postman:
 ### Save genre
-![Image](https://github.com/axeaneProjects/github-wassim/blob/master/many-to-many/src/main/resources/saveGenreJPG.JPG)  
+![Image](https://github.com/Wassimkal-projects/movie-catalog/blob/master/src/main/resources/saveGenreJPG.JPG)  
 ### Save movie
-![Image](https://github.com/axeaneProjects/github-wassim/blob/master/many-to-many/src/main/resources/saveMovie.JPG)  
+![Image](https://github.com/Wassimkal-projects/movie-catalog/blob/master/src/main/resources/saveMovie.JPG)  
 
