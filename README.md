@@ -27,7 +27,7 @@ server:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/movie-catalog
-    username: wk-prjects
+    username: wk-projects
     password: admin
  ``` 
 * Pour le suivi, la gestion et l'application des changements de schéma de base de données indépendamment de l'SGBD on utilise liquibase
